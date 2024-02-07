@@ -156,9 +156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87cb07a0c4cdddf46b27ba53e6b4f679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinAngel: -33
+  MaxAngel: 25
   CameraAxisTransform: {fileID: 1505660239}
   RotatinSpeedY: 80
-  RotatinSpeedX: 110
+  RotatinSpeedX: 120
 --- !u!4 &504260727
 Transform:
   m_ObjectHideFlags: 0
