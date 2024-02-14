@@ -25,25 +25,31 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         _moveVector = Vector3.zero;
+        animator.SetFloat("speed", 0);
+        animator.SetFloat("speed2", 0);
 
         if (Input.GetKey(KeyCode.A))
         {
             _moveVector -= transform.right;
+            animator.SetFloat("speed2", -1);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             _moveVector += transform.right;
+            animator.SetFloat("speed2", 1);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             _moveVector -= transform.forward;
+            animator.SetFloat("speed", -1);
         }
 
         if (Input.GetKey(KeyCode.W))
         {
             _moveVector += transform.forward;
+            animator.SetFloat("speed", 1);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
@@ -51,18 +57,15 @@ public class PlayerController : MonoBehaviour
             _fallVelociti = -JumpForce;
         }
 
-        if (_moveVector != Vector3.zero)
-        {
-            animator.SetBool("Is Run", true);
-        }
-        else
-        {
-            animator.SetBool("Is Run", false);
-        }
-
+        
         if (_fallVelociti != 0)
         {
             animator.SetBool("Is Grounded", false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
+        {
+            animator.SetTrigger("Jump");
         }
 
         if (_characterController.isGrounded)

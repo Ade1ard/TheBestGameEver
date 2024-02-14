@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: f242f1de996e4734eadf5798136b3fa1
+guid: e3258f69a5fb186468ba1e8aeed26e04
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Sword And Shield Run
+    second: Standing Torch Run Right
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Sword And Shield Run
+      name: Standing Torch Run Right
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 21
+      lastFrame: 19
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

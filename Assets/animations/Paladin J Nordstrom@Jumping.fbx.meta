@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 1c77bbd937cd0d349a4fa65739205166
+guid: 37b6d0246ac978c438665661727441e8
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Sword And Shield Jump
+    second: Jumping
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Sword And Shield Jump
+      name: Jumping
       takeName: mixamo.com
       internalID: 0
-      firstFrame: 0
-      lastFrame: 29
+      firstFrame: 9
+      lastFrame: 51
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
