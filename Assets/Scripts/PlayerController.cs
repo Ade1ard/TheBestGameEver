@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator animator;
+
     public float JumpForce;
     public float speed;
 
@@ -47,6 +49,25 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
         {
             _fallVelociti = -JumpForce;
+        }
+
+        if (_moveVector != Vector3.zero)
+        {
+            animator.SetBool("Is Run", true);
+        }
+        else
+        {
+            animator.SetBool("Is Run", false);
+        }
+
+        if (_fallVelociti != 0)
+        {
+            animator.SetBool("Is Grounded", false);
+        }
+
+        if (_characterController.isGrounded)
+        {
+            animator.SetBool("Is Grounded", true);
         }
 
     }
