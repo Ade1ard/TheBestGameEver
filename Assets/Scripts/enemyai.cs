@@ -21,10 +21,14 @@ public class enemyai : MonoBehaviour
 
     void Update()
     {
-        if (_navMeshAgent.remainingDistance == 0)
+        if (!_isPlayerNoticed)
         {
-            PickNewTargetPoint();
+            if (_navMeshAgent.remainingDistance == 0)
+            {
+                PickNewTargetPoint();
+            }
         }
+        
 
         var direction = player.transform.position - transform.position;
 
@@ -40,6 +44,11 @@ public class enemyai : MonoBehaviour
                     _isPlayerNoticed = true;
                 }
             }
+        }
+
+        if (_isPlayerNoticed)
+        {
+            _navMeshAgent.destination = player.transform.position;
         }
         
     }
