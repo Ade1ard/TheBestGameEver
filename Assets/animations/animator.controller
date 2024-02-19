@@ -83,7 +83,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Standing Torch Run Left
-  m_Speed: 1
+  m_Speed: 0.7
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5481988714535053523}
@@ -96,7 +96,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 9ad80aa2a79097b49a589eb16afbbb6c,
+  m_Motion: {fileID: -203655887218126122, guid: ec1768d21a0274b4ab4b4784495b1686,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -117,25 +117,25 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Jump
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: speed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: speed2
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -182,7 +182,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sword And Shield Run
-  m_Speed: 1
+  m_Speed: 0.7
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5194968158686445759}
@@ -195,7 +195,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: ddd78d7b72a967b45b58914b2ac2ba13,
+  m_Motion: {fileID: -203655887218126122, guid: b6a71a2120eace04f959a10fb38ae876,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -210,7 +210,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Running Backward
-  m_Speed: 1
+  m_Speed: 0.7
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4311685109126806871}
@@ -223,7 +223,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 659b01f8310d08849994b9632d1df610,
+  m_Motion: {fileID: -203655887218126122, guid: 49e49fea0c623604b94adc563fdc6a45,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -238,7 +238,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Standing Torch Run Right
-  m_Speed: 1
+  m_Speed: 0.7
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6991545846458788208}
@@ -251,7 +251,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: e3258f69a5fb186468ba1e8aeed26e04,
+  m_Motion: {fileID: -203655887218126122, guid: 6f2375c163473f04cbde204ea25d3ed7,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -445,7 +445,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 98382a22bd1375247b42c9e2c21661d9,
+  m_Motion: {fileID: -203655887218126122, guid: 2081c5b1ebe838f4581c592577d630db,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -485,7 +485,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sword And Shield Jump
-  m_Speed: 1
+  m_Speed: 0.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 769840148172933017}
@@ -498,7 +498,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 37b6d0246ac978c438665661727441e8,
+  m_Motion: {fileID: -203655887218126122, guid: ee928d6b18bd69d4c903954b46026ae3,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 

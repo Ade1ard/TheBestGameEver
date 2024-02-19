@@ -12,6 +12,8 @@ public class enemyai : MonoBehaviour
     private NavMeshAgent _navMeshAgent;
     private bool _isPlayerNoticed;
 
+    public Animator _animatorEnemy;
+
     void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -51,6 +53,15 @@ public class enemyai : MonoBehaviour
             _navMeshAgent.destination = player.transform.position;
         }
         
+        if (_navMeshAgent.isStopped == false)
+        {
+            _animatorEnemy.SetBool("is run", true);
+        }
+
+        if (_navMeshAgent.isStopped == true)
+        {
+            _animatorEnemy.SetBool("is run", false);
+        }
     }
     private void PickNewTargetPoint()
     {
