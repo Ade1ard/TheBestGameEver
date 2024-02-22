@@ -6,6 +6,7 @@ public class boolet : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
+    public float damage = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,14 @@ public class boolet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        var enemyhealt = collision.gameObject.GetComponent<enemyhealt>();
+        if (enemyhealt != null)
+        {
+            enemyhealt.DealDamage(damage);
+        }
+
+
+
         DestroyFireball();
     }
 
