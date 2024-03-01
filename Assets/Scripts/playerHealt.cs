@@ -7,6 +7,9 @@ public class playerHealt : MonoBehaviour
     public float value = 100;
     public RectTransform valueRectTransform;
 
+    public GameObject gameplayUI;
+    public GameObject gameoverscreen;
+
     private float _maxValue;
     // Start is called before the first frame update
     void Start()
@@ -19,9 +22,11 @@ public class playerHealt : MonoBehaviour
     public void DealDamage(float damage)
     {
         value -= damage;
-        if(value <= 0)
+
+        if (value <= 0)
         {
-            Destroy(gameObject);
+            PlayerisDead();
+            Debug.Log("furygiyecuycutute");
         }
 
         DrawHealtBar();
@@ -36,6 +41,15 @@ public class playerHealt : MonoBehaviour
     private void DrawHealtBar()
     {
         valueRectTransform.anchorMax = new Vector2(value / _maxValue, 1);
+    }
+
+    private void PlayerisDead()
+    {
+        gameplayUI.gameObject.SetActive(false);
+        gameoverscreen.gameObject.SetActive(true);
+        GetComponent<PlayerController>().enabled = false;
+        GetComponent<fireballcaster>().enabled = false;
+        GetComponent<CameraRatation>().enabled = false;
     }
  
 }
