@@ -51,5 +51,12 @@ public class playerHealt : MonoBehaviour
         GetComponent<fireballcaster>().enabled = false;
         GetComponent<CameraRatation>().enabled = false;
     }
+
+    public void addHealt(float amount)
+    {
+        value += amount;
+        value = Mathf.Clamp(value, 0, _maxValue);
+        DrawHealtBar();
+    }
  
 }
