@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class enemyhealt : MonoBehaviour
 {
+    public playerprogress _playerprogress;
+
     public float value = 100;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +18,7 @@ public class enemyhealt : MonoBehaviour
         value -= damage;
         if (value <= 0)
         {
+            _playerprogress.AddEXP(10);
             Destroy(gameObject);
         }
     }

@@ -10,11 +10,12 @@ public class playerHealt : MonoBehaviour
     public GameObject gameplayUI;
     public GameObject gameoverscreen;
 
-    private float _maxValue;
+    public float _maxValue;
     // Start is called before the first frame update
     void Start()
     {
         _maxValue = value;
+
 
         DrawHealtBar();
     }
@@ -26,7 +27,6 @@ public class playerHealt : MonoBehaviour
         if (value <= 0)
         {
             PlayerisDead();
-            Debug.Log("furygiyecuycutute");
         }
 
         DrawHealtBar();

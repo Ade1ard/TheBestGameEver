@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class fireballcaster : MonoBehaviour
 {
+    public float damage = 10;
     public boolet booletprefab;
     public Transform booletSourceTransform;
     // Start is called before the first frame update
@@ -17,7 +18,8 @@ public class fireballcaster : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(booletprefab, booletSourceTransform.position, booletSourceTransform.rotation);
+            var fireball = Instantiate(booletprefab, booletSourceTransform.position, booletSourceTransform.rotation);
+            fireball.damage = damage;
         }
     }
 }
