@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class enemyhealt : MonoBehaviour
 {
-    public playerprogress _playerprogress;
+    public playerprogress playerProgress;
 
     public float value = 100;
     // Start is called before the first frame update
+
+    public bool IsAlive()
+    {
+        return value > 0;
+    }
     void Start()
     {
         
@@ -18,9 +23,14 @@ public class enemyhealt : MonoBehaviour
         value -= damage;
         if (value <= 0)
         {
-            _playerprogress.AddEXP(10);
-            Destroy(gameObject);
+            playerProgress.AddEXP(20);
+            Dead();
         }
+    }
+
+    public void Dead()
+    {
+
     }
 
     // Update is called once per frame

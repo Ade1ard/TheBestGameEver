@@ -13,8 +13,14 @@ public class enemyai : MonoBehaviour
     private NavMeshAgent _navMeshAgent;
     private bool _isPlayerNoticed;
     private playerHealt _playerHealt;
+    private enemyhealt _enemyhealt;
 
     public Animator _animatorEnemy;
+
+    public bool IsAlive()
+    {
+        return _enemyhealt.IsAlive();
+    }
 
     void Start()
     {

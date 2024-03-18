@@ -34,6 +34,7 @@ public class playerprogress : MonoBehaviour
             GetComponent<fireballcaster>().damage += 10;
             GetComponent<playerHealt>().value += 25;
             GetComponent<playerHealt>()._maxValue += 25;
+            
         }
         DrawUI();
     }
