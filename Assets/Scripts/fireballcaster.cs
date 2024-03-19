@@ -7,6 +7,7 @@ public class fireballcaster : MonoBehaviour
     public float damage = 10;
     public boolet booletprefab;
     public Transform booletSourceTransform;
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class fireballcaster : MonoBehaviour
         {
             var fireball = Instantiate(booletprefab, booletSourceTransform.position, booletSourceTransform.rotation);
             fireball.damage = damage;
+            audio.Play();
         }
     }
 }

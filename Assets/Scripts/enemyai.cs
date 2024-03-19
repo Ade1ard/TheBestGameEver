@@ -17,17 +17,14 @@ public class enemyai : MonoBehaviour
 
     public Animator _animatorEnemy;
 
-    public bool IsAlive()
-    {
-        return _enemyhealt.IsAlive();
-    }
+
 
     void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
 
         PickNewTargetPoint();
-
+        
         _playerHealt = player.GetComponent<playerHealt>();
     }
 
