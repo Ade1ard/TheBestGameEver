@@ -910,7 +910,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   granadeprefab: {fileID: 0}
   granadeSourseTransform: {fileID: 441402761547095187}
-  delay: 3
   force: 350
 --- !u!114 &6367940618547546293
 MonoBehaviour:
