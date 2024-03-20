@@ -7,6 +7,8 @@ public class boolet : MonoBehaviour
     public float speed;
     public float lifeTime;
     public float damage = 10;
+
+    public ParticleSystem blood;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,10 @@ public class boolet : MonoBehaviour
         {
             enemyhealt.DealDamage(damage);
         }
-
+        if (collision.gameObject.GetComponent<enemyhealt>())
+        {
+            Instantiate(blood, gameObject.transform.position, gameObject.transform.rotation);
+        }
 
 
         DestroyFireball();

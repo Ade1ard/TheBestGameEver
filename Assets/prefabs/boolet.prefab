@@ -111,6 +111,7 @@ MonoBehaviour:
   speed: 70
   lifeTime: 20
   damage: 10
+  blood: {fileID: 8525351346496648895, guid: 583063d54eb884e439e52cedad60ae11, type: 3}
 --- !u!108 &5219441060058103670
 Light:
   m_ObjectHideFlags: 0
