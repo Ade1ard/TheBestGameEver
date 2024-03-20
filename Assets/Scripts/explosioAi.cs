@@ -5,8 +5,8 @@ using UnityEngine;
 public class explosioAi : MonoBehaviour
 {
     public float damage = 50;
-    public float maxSize = 5;
-    public float speed = 2;
+    public float maxSize = 6;
+    public float speed = 4;
     // Start is called before the first frame update
     void Start()
     {

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class granade : MonoBehaviour
 {
-    public float delay = 3;
+    public float delay = 2;
     public GameObject explasionPrefab;
     // Start is called before the first frame update
 
     private void OnCollisionEnter(Collision collision)
     {
-        Invoke("Explosion", 3);
+        Invoke("Explosion", delay);
     }
 
     private void Explosion()
