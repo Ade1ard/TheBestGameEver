@@ -79,6 +79,7 @@ public class enemyai : MonoBehaviour
         _navMeshAgent.destination = targetpoints[Random.Range(0, targetpoints.Count)].position;
     }
 
+
     private void AttackUpdate()
     {
         if (_isPlayerNoticed)
@@ -89,4 +90,4 @@ public class enemyai : MonoBehaviour
             }
         }
     }
-}
+}        
