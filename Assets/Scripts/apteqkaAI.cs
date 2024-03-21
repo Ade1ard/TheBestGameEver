@@ -24,6 +24,6 @@ public class apteqkaAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        gameObject.transform.Rotate(0, 2, 0);
     }
 }
