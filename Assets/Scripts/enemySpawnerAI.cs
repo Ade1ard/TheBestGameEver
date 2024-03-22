@@ -10,8 +10,8 @@ public class enemySpawnerAI : MonoBehaviour
     public playerprogress playerProg;
 
     public int enemiesMax = 5;
-    public float delay = 14f;
-    public float increaseEnemyesCountDelay = 20;
+    public float delay = 15f;
+    public float increaseEnemyesCountDelay = 25;
 
     public List<Transform> _enemySpawnPoints;
 
@@ -25,7 +25,7 @@ public class enemySpawnerAI : MonoBehaviour
 
     private void IncreaseEnemyesMaxCount()
     {
-        if (delay >= 1)
+        if (delay >= 2)
         {
             delay -= 0.5f;
         }

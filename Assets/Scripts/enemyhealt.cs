@@ -34,8 +34,7 @@ public class enemyhealt : MonoBehaviour
         gameObject.GetComponent<enemyhealt>().enabled = false;
         gameObject.GetComponent<CapsuleCollider>().enabled = false;
         gameObject.GetComponent<NavMeshAgent>().speed = 0;
-        animatorEnemy.SetBool("is run", false);
-        animatorEnemy.SetTrigger("IsAlive");
+        animatorEnemy.SetBool("IsAlive", true);
 
         Invoke("FullDead", 30);
     }

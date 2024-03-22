@@ -10,10 +10,13 @@ public class enemyai : MonoBehaviour
     public float viewAngle;
     public float damage = 20;
 
+    public float attackdistanse = 1;
+
     private NavMeshAgent _navMeshAgent;
     private bool _isPlayerNoticed;
     private playerHealt _playerHealt;
     private enemyhealt _enemyhealt;
+    private CharacterController PlayerCont;
 
     public Animator _animatorEnemy;
 
@@ -26,6 +29,8 @@ public class enemyai : MonoBehaviour
         PickNewTargetPoint();
         
         _playerHealt = player.GetComponent<playerHealt>();
+
+        PlayerCont = player.GetComponent<CharacterController>();
     }
 
     void Update()
@@ -37,11 +42,11 @@ public class enemyai : MonoBehaviour
                 PickNewTargetPoint();
             }
         }
-        
+       
+        _isPlayerNoticed = false;
+        if (_playerHealt.value <= 0) return;
 
         var direction = player.transform.position - transform.position;
-
-        _isPlayerNoticed = false;
 
         if (Vector3.Angle(transform.forward, direction) < viewAngle)
         {
@@ -63,20 +68,17 @@ public class enemyai : MonoBehaviour
         }
 
         AttackUpdate();
-
-        if (_navMeshAgent.isStopped == false)
-        {
-            _animatorEnemy.SetBool("is run", true);
-        }
-
-        if (_navMeshAgent.isStopped == true)
-        {
-            _animatorEnemy.SetBool("is run", false);
-        }
     }
     private void PickNewTargetPoint()
     {
         _navMeshAgent.destination = targetpoints[Random.Range(0, targetpoints.Count)].position;
+    }
+
+    public void AttackDamageEvent()
+    {
+        if (!_isPlayerNoticed) return;
+        if (_navMeshAgent.remainingDistance > (_navMeshAgent.stoppingDistance + attackdistanse)) return;
+        _playerHealt.DealDamage(damage);
     }
 
 
@@ -84,9 +86,9 @@ public class enemyai : MonoBehaviour
     {
         if (_isPlayerNoticed)
         {
-            if(_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+            if(_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance && PlayerCont.isGrounded)
             {
-                _playerHealt.DealDamage(damage * Time.deltaTime);
+                _animatorEnemy.SetTrigger("attack");
             }
         }
     }
