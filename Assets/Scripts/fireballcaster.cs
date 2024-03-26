@@ -8,6 +8,8 @@ public class fireballcaster : MonoBehaviour
     public boolet booletprefab;
     public Transform booletSourceTransform;
     public AudioSource audio;
+
+    private float _timeLastSpawned;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +19,13 @@ public class fireballcaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
+            if (Time.time - _timeLastSpawned < 0.2) return;
             var fireball = Instantiate(booletprefab, booletSourceTransform.position, booletSourceTransform.rotation);
             fireball.damage = damage;
             audio.Play();
+            _timeLastSpawned = Time.time;
         }
     }
 }

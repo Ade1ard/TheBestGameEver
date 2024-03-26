@@ -23,7 +23,7 @@ public class enemyhealt : MonoBehaviour
         value -= damage;
         if (value <= 0)
         {
-            playerProgress.AddEXP(15);
+            playerProgress.AddEXP(25);
             Dead();
         }
     }
